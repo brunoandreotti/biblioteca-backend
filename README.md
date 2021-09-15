@@ -10,7 +10,8 @@
   <a href="#sobre"> Sobre </a> |
   <a href="#rotas-da-aplicação"> Rotas da aplicação </a> |
   <a href="#rodando-o-projeto"> Rodando o projeto </a> |
-  <a href="#tecnologias-utilizadas"> Tecnologias utilizadas </a>
+  <a href="#tecnologias-utilizadas"> Tecnologias utilizadas </a> |
+  <a href="#implementações"> Implementações </a>      
        <br />
     <br />
     <h1 align="center">
@@ -39,6 +40,11 @@ O objetivo do projeto foi criar o backend para um sistema de gerenciamento de um
 <b>[PUT] </b> /obras/:id : A rota deverá atualizar as informações de título, editora, imagem e autores da obra com o ID presente nos parâmetros da rota.<br><br>
 <b>[DELETE] </b> /obras/:id : A rota deverá deletar a obra com o ID presente nos parâmetros da rota.<br>
 
+# Implementações:
+
+### Autenticação
+Em construção...
+
 # Rodando o projeto:
 
 ### Pré-requisitos:
@@ -46,6 +52,7 @@ Antes de começar, você precisará instalar em sua máquina as seguintes ferram
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Docker Compose](https://docs.docker.com/compose/install) e [Insomnia](https://insomnia.rest/download). <br> Além disso, é aconselhável ter um editor como o [VSCode](https://code.visualstudio.com/) para trabalhar com o código!
 
 ### Instalando e rodando o projeto:
+Em construção...
 
 ```bash
 # Clone este repositório
