@@ -10,7 +10,7 @@
   <a href="#sobre"> Sobre </a> |
   <a href="#rotas-da-aplicação"> Rotas da aplicação </a> |
   <a href="#rodando-o-projeto"> Rodando o projeto </a> |
-  <a href="#tecnologias-utilizadas"> Tecnologias-utilizadas </a>
+  <a href="#tecnologias-utilizadas"> Tecnologias utilizadas </a>
        <br />
     <br />
     <h1 align="center">
