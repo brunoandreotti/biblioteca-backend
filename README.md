@@ -10,7 +10,7 @@
   <a href="#sobre"> Sobre </a> |
   <a href="#rotas-da-aplicação"> Rotas da aplicação </a> |
   <a href="#rodando-o-projeto"> Rodando o projeto </a> |
-  <a href="#tecnologias-utilizadas"> Tecnologias-utilizadas </a>
+  <a href="#tecnologias-utilizadas"> Tecnologias utilizadas </a>
        <br />
     <br />
     <h1 align="center">
@@ -21,12 +21,12 @@
 
 
 # Sobre
-O objeto do projeto foi criar o backend para um sistema de gerenciamento de uma biblioteca, com a finalidade de colocar em prática os conhecimentos que adquiri até o momento!
+O objetivo do projeto foi criar o backend para um sistema de gerenciamento de uma biblioteca, com a finalidade de colocar em prática os conhecimentos que adquiri até o momento!
 
 
 # Rotas da aplicação:
 <b>[GET] </b> /obras : A rota deverá listar todas as obras cadastradas.<br><br>
-<b>[GET] </b> /obras/:id : A rota deverá listar a obras referente ao ID informado.<br><br>
+<b>[GET] </b> /obras/:id : A rota deverá listar as obras referente ao ID informado.<br><br>
 <b>[POST] </b> /obras :  A rota deverá receber titulo, editora, imagem, e autores dentro do corpo da requisição.<br>Por exemplo:<br>
 ```javascript
 {
@@ -36,13 +36,13 @@ O objeto do projeto foi criar o backend para um sistema de gerenciamento de uma 
 	"autores": "Autor 1, Autor 2, Autor 3"
 }
 ```
-<b>[PUT] </b> /obras/:id : A rota deverá atualizar as informações de titulo, editora, imagem e autores da obra com o ID presente nos parâmetros da rota.<br><br>
+<b>[PUT] </b> /obras/:id : A rota deverá atualizar as informações de título, editora, imagem e autores da obra com o ID presente nos parâmetros da rota.<br><br>
 <b>[DELETE] </b> /obras/:id : A rota deverá deletar a obra com o ID presente nos parâmetros da rota.<br>
 
 # Rodando o projeto:
 
 ### Pré-requisitos:
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+Antes de começar, você precisará instalar em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Docker Compose](https://docs.docker.com/compose/install) e [Insomnia](https://insomnia.rest/download). <br> Além disso, é aconselhável ter um editor como o [VSCode](https://code.visualstudio.com/) para trabalhar com o código!
 
 ### Instalando e rodando o projeto:
@@ -60,7 +60,7 @@ $ docker-compose up -d
 # Crie a estrutura do banco de dados
 $ node ace migration:run
 
-# Instale as dependências
+# Instale as dependências do projeto
 $ npm install
 
 # Inicie o servidor da aplicação
@@ -73,7 +73,7 @@ $ npm run dev
 
 # Tecnologias utilizadas: 
 <p align="center">
-<a href="https://nodejs.org/en/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" width="40" /></a> <a href="https://adonisjs.com"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adonisjs/adonisjs-original.svg" height="40" width="40" /></a> <a href="https://www.typescriptlang.org"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" width="40" /></a> <a href="https://insomnia.rest/download"><img src="./readme/insomnia.svg" height="40" width="40" /></a> <a href="https://insomnia.rest/download"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" width="40" /></a>
+<a href="https://nodejs.org/en/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" width="40" /></a> <a href="https://adonisjs.com"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adonisjs/adonisjs-original.svg" height="40" width="40" /></a> <a href="https://www.typescriptlang.org"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" width="40" /></a> <a href="https://insomnia.rest/download"><img src="./readme/insomnia.svg" height="40" width="40" /></a> <a href="https://www.docker.com"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" width="40" /></a>
 </p>
 
 
