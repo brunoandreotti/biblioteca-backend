@@ -1,7 +1,7 @@
 import Route from '@ioc:Adonis/Core/Route'
+import('./routes/auth')
+import('./routes/posts')
 
-Route.get('/obras', 'BooksController.index')
-Route.get('/obras/:id', 'BooksController.show')
-Route.post('/obras', 'BooksController.store')
-Route.put('/obras/:id', 'BooksController.update')
-Route.delete('/obras/:id', 'BooksController.destroy')
+Route.get('/', async () => {
+  return 'Sistema de Gerenciamento da Biblioteca'
+})
