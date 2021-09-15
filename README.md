@@ -21,7 +21,7 @@
 
 
 # Sobre
-O objeto do projeto foi criar o backend para um sistema de gerenciamento de uma biblioteca, com a finalidade de colocar em prática os conhecimentos que adquiri até o momento!
+O objetivo do projeto foi criar o backend para um sistema de gerenciamento de uma biblioteca, com a finalidade de colocar em prática os conhecimentos que adquiri até o momento!
 
 
 # Rotas da aplicação:
