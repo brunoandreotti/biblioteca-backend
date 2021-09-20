@@ -26,6 +26,8 @@ O objetivo do projeto foi criar o backend para um sistema de gerenciamento de um
 
 
 # Rotas da aplicação:
+<b>[GET] </b> /auth : A rota deverá fazer o login do usuário e retornar um bearer token.<br><br>
+<b>[DELETE] </b> /auth : A rota deverá deletar o usuário baseado em seu bearer token.<br><br>
 <b>[GET] </b> /obras : A rota deverá listar todas as obras cadastradas.<br><br>
 <b>[GET] </b> /obras/:id : A rota deverá listar as obras referente ao ID informado.<br><br>
 <b>[POST] </b> /obras :  A rota deverá receber titulo, editora, imagem, e autores dentro do corpo da requisição.<br>Por exemplo:<br>
@@ -43,7 +45,14 @@ O objetivo do projeto foi criar o backend para um sistema de gerenciamento de um
 # Implementações:
 
 ### Autenticação
-Em construção...
+Foi adicionada a rota '/auth', responsável pela autenticatição (login/logout). <br>
+A rota '/obras' foi protegida, permitindo somente ser acessada por usuários autenticados. <br>
+Esse projeto possui dois níveis usuários possíveis: <br>
+Normal (email: nomal@email.com, password: normal): Possui acesso às rotas de listagem. <br>
+Admin (email: admin@email.com, password: admin): Possui acesso a todas as rotas.
+
+
+
 
 # Rodando o projeto:
 
@@ -56,7 +65,7 @@ Em construção...
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/brunoandreotti/biblioteca-backend>
+$ git clone https://github.com/brunoandreotti/biblioteca-backend
 
 # Acesse a pasta do projeto no terminal
 $ cd biblioteca-backend
@@ -64,11 +73,14 @@ $ cd biblioteca-backend
 # Crie um container com MySQL
 $ docker-compose up -d
 
+# Instale as dependências do projeto
+$ npm install
+
 # Crie a estrutura do banco de dados
 $ node ace migration:run
 
-# Instale as dependências do projeto
-$ npm install
+# Carregue os usuários 'Normal' e 'Admin' no banco de dados
+$ node ace db:seed
 
 # Inicie o servidor da aplicação
 $ npm run dev
