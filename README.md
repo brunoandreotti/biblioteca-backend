@@ -49,7 +49,17 @@ Foi adicionada a rota '/auth', responsável pela autenticatição (login/logout)
 A rota '/obras' foi protegida, permitindo somente ser acessada por usuários autenticados. <br>
 Esse projeto possui dois níveis usuários possíveis: <br>
 Normal (email: nomal@email.com, password: normal): Possui acesso às rotas de listagem. <br>
-Admin (email: admin@email.com, password: admin): Possui acesso a todas as rotas.
+Admin (email: admin@email.com, password: admin): Possui acesso a todas as rotas. <br><br>
+O usuário deve ser enviado no corpo da requisição como um JSON. Exemplo: <br>
+```javascript
+{
+	"email": "admin@email.com",
+  "password": "admin"
+}
+```
+<br>
+
+Após a autenticação, as requisições terão de contenter um header do tipo 'Authorization' com o valor 'bearer bearer-token-gerado-na-autenticação'
 
 
 
