@@ -53,13 +53,13 @@ Admin (email: admin@email.com, password: admin): Possui acesso a todas as rotas.
 O usuário deve ser enviado no corpo da requisição como um JSON. Exemplo: <br>
 ```javascript
 {
-	"email": "admin@email.com",
-    "password": "admin"
+  "email": "admin@email.com",
+  "password": "admin"
 }
 ```
 <br>
 
-Após a autenticação, as requisições terão de contenter um header do tipo 'Authorization' com o valor 'bearer bearer-token-gerado-na-autenticação':
+Após a autenticação, as requisições terão que conter um header do tipo 'Authorization' com o valor 'bearer bearer-token-gerado-na-autenticação':
 
 <h1 align="center">
     <img src="./readme/biblioteca-auth.gif" alt="gif-readme">
