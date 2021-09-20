@@ -75,7 +75,7 @@ Antes de começar, você precisará instalar em sua máquina as seguintes ferram
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Docker Compose](https://docs.docker.com/compose/install) e [Insomnia](https://insomnia.rest/download). <br> Além disso, é aconselhável ter um editor como o [VSCode](https://code.visualstudio.com/) para trabalhar com o código!
 
 ### Instalando e rodando o projeto:
-Em construção...
+
 
 ```bash
 # Clone este repositório
