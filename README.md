@@ -26,7 +26,7 @@ O objetivo do projeto foi criar o backend para um sistema de gerenciamento de um
 
 
 # Rotas da aplicação:
-<b>[GET] </b> /auth : A rota deverá fazer o login do usuário e retornar um bearer token.<br><br>
+<b>[POST] </b> /auth : A rota deverá fazer o login do usuário e retornar um bearer token.<br><br>
 <b>[DELETE] </b> /auth : A rota deverá deletar o usuário baseado em seu bearer token.<br><br>
 <b>[GET] </b> /obras : A rota deverá listar todas as obras cadastradas.<br><br>
 <b>[GET] </b> /obras/:id : A rota deverá listar as obras referente ao ID informado.<br><br>
