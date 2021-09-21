@@ -64,6 +64,15 @@ Após a autenticação, as requisições terão que conter um header do tipo 'Au
 <h1 align="center">
     <img src="./readme/biblioteca-auth.gif" alt="gif-readme">
  </h1>
+ 
+ ### Validação de dados
+ Foi adicionada as seguintes validações para os dados recebidos nas requisições: <br>
+ <b>[POST] </b> /auth : O campo "email", deverá ser  um endereço de email.<br><br>
+ <b>[POST] </b> /obras : <br>
+ O campo 'título' deverá ser uma string e o título deve ser único, não podendo haver dois títulos iguais no banco de dados.<br>
+ O campo 'editora' deverá ser uma string. <br>
+ O campo 'imagem' deverá ser uma url e a imagem deve ser única, não podendo haver duas imagens com a mesma url no banco de dados. <br>
+ O campo 'autores' deverá ser uma string.
 
 
 
