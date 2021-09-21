@@ -1,5 +1,6 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Book from 'App/Models/Book'
+import { BookStoreValidator, BookUpdateValidator } from 'App/Validators/index'
 
 export default class BooksController {
   public async index({}: HttpContextContract) {
@@ -9,7 +10,7 @@ export default class BooksController {
   }
 
   public async store({ request }: HttpContextContract) {
-    const data = request.only(['título', 'editora', 'imagem', 'autores'])
+    const data = await request.validate(BookStoreValidator)
 
     const book = await Book.create(data)
 
@@ -28,7 +29,7 @@ export default class BooksController {
 
   public async update({ params, response, request }: HttpContextContract) {
     const book = await Book.find(params.id)
-    const data = request.only(['título', 'editora', 'imagem', 'autores'])
+    const data = await request.validate(BookUpdateValidator)
 
     if (!book) {
       return response.notFound({ error: { message: `Book not found!` } })

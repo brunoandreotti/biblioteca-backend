@@ -15,7 +15,7 @@ export default class Book extends BaseModel {
   public imagem: string
 
   @column({ columnName: 'authors' })
-  public autores: string[]
+  public autores: string
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
