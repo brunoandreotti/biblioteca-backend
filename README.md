@@ -49,7 +49,21 @@ Foi adicionada a rota '/auth', responsável pela autenticatição (login/logout)
 A rota '/obras' foi protegida, permitindo somente ser acessada por usuários autenticados. <br>
 Esse projeto possui dois níveis usuários possíveis: <br>
 Normal (email: nomal@email.com, password: normal): Possui acesso às rotas de listagem. <br>
-Admin (email: admin@email.com, password: admin): Possui acesso a todas as rotas.
+Admin (email: admin@email.com, password: admin): Possui acesso a todas as rotas. <br><br>
+O usuário deve ser enviado no corpo da requisição como um JSON. Exemplo: <br>
+```javascript
+{
+  "email": "admin@email.com",
+  "password": "admin"
+}
+```
+<br>
+
+Após a autenticação, as requisições terão que conter um header do tipo 'Authorization' com o valor 'bearer bearer-token-gerado-na-autenticação':
+
+<h1 align="center">
+    <img src="./readme/biblioteca-auth.gif" alt="gif-readme">
+ </h1>
 
 
 
@@ -61,7 +75,7 @@ Antes de começar, você precisará instalar em sua máquina as seguintes ferram
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Docker Compose](https://docs.docker.com/compose/install) e [Insomnia](https://insomnia.rest/download). <br> Além disso, é aconselhável ter um editor como o [VSCode](https://code.visualstudio.com/) para trabalhar com o código!
 
 ### Instalando e rodando o projeto:
-Em construção...
+
 
 ```bash
 # Clone este repositório
