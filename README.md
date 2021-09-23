@@ -10,8 +10,8 @@
   <a href="#sobre"> Sobre </a> |
   <a href="#rotas-da-aplicação"> Rotas da aplicação </a> |
   <a href="#rodando-o-projeto"> Rodando o projeto </a> |
-  <a href="#tecnologias-utilizadas"> Tecnologias utilizadas </a> |
-  <a href="#implementações"> Implementações </a>      
+  <a href="#implementações"> Implementações </a> |
+  <a href="#tecnologias-utilizadas"> Tecnologias utilizadas </a>      
        <br />
     <br />
     <h1 align="center">
@@ -69,16 +69,19 @@ Após a autenticação, as requisições terão que conter um header do tipo 'Au
  Foi adicionada as seguintes validações para os dados recebidos nas requisições: <br><br>
  <b>[POST] </b> /auth : O campo "email", deverá ser  um endereço de email.<br><br>
  <b>[POST] </b> /obras : <br>
- O campo 'título' deverá ser uma string e o título deve ser único, não podendo haver dois títulos iguais no banco de dados.<br>
- O campo 'editora' deverá ser uma string. <br>
- O campo 'imagem' deverá ser uma url e a imagem deve ser única, não podendo haver duas imagens com a mesma url no banco de dados. <br>
- O campo 'autores' deverá ser uma string. <br><br>
+ O campo 'título' deverá ser uma string e o título deve ser único, não podendo haver dois títulos iguais no banco de dados. O campo é obrigatório.<br>
+ O campo 'editora' deverá ser uma string. O campo é obrigatório. <br>
+ O campo 'imagem' deverá ser uma url e a imagem deve ser única, não podendo haver duas imagens com a mesma url no banco de dados. O campo é obrigatório. <br>
+ O campo 'autores' deverá ser uma string. O campo é obrigatório. <br><br>
  
  <b>[PUT] </b> /obras/:id : <br>
-  O campo 'título' deverá ser uma string.<br>
- O campo 'editora' deverá ser uma string. <br>
- O campo 'imagem' deverá ser uma url.<br>
- O campo 'autores' deverá ser uma string. <br><br>
+  O campo 'título' deverá ser uma string. O campo é opcional.<br>
+ O campo 'editora' deverá ser uma string. O campo é opcional. <br>
+ O campo 'imagem' deverá ser uma url. O campo é opcional.<br>
+ O campo 'autores' deverá ser uma string. O campo é opcional. <br><br>
+ 
+ ### Relacionamento de dados de dados
+ Agora as informações do usuário que cadastrou o livro são informadas junto ao livro.
 
 
 
