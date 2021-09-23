@@ -5,10 +5,10 @@ export class BookUpdateValidator {
   constructor(protected ctx: HttpContextContract) {}
 
   public schema = schema.create({
-    título: schema.string({ trim: true }),
-    imagem: schema.string({ trim: true }, [rules.url()]),
-    editora: schema.string({ trim: true }),
-    autores: schema.string(),
+    título: schema.string.optional({ trim: true }),
+    imagem: schema.string.optional({ trim: true }, [rules.url()]),
+    editora: schema.string.optional({ trim: true }),
+    autores: schema.string.optional(),
   })
 
   public messages = {}

@@ -7,6 +7,9 @@ export default class User extends BaseModel {
   public id: number
 
   @column()
+  public name: string
+
+  @column()
   public email: string
 
   @column({ serializeAs: null })
@@ -18,10 +21,23 @@ export default class User extends BaseModel {
   @column()
   public rememberMeToken?: string
 
-  @column.dateTime({ autoCreate: true })
+  @column.dateTime({
+    autoCreate: true,
+    serializeAs: 'createddAt',
+    serialize: (value: DateTime) => {
+      return value.toFormat('dd/MM/yyyy HH:mm:ss')
+    },
+  })
   public createdAt: DateTime
 
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  @column.dateTime({
+    autoCreate: true,
+    autoUpdate: true,
+    serializeAs: 'updatedAt',
+    serialize: (value: DateTime) => {
+      return value.toFormat('dd/MM/yyyy HH:mm:ss')
+    },
+  })
   public updatedAt: DateTime
 
   @beforeSave()

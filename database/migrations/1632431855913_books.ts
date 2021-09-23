@@ -6,6 +6,12 @@ export default class Books extends BaseSchema {
   public async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
+      table
+        .integer('user_id')
+        .unsigned()
+        .references('users.id')
+        .onUpdate('CASCADE')
+        .onDelete('CASCADE')
       table.string('title').notNullable()
       table.string('publisher').notNullable()
       table.string('image').notNullable()

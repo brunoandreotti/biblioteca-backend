@@ -4,15 +4,19 @@ import { BookStoreValidator, BookUpdateValidator } from 'App/Validators/index'
 
 export default class BooksController {
   public async index({}: HttpContextContract) {
-    const books = await Book.all()
+    const books = await Book.query().orderBy('id', 'desc').preload('user')
 
     return books
   }
 
-  public async store({ request }: HttpContextContract) {
+  public async store({ request, auth }: HttpContextContract) {
     const data = await request.validate(BookStoreValidator)
 
-    const book = await Book.create(data)
+    const user = await auth.authenticate()
+
+    const book = await Book.create({ userId: user.id, ...data })
+
+    await book.preload('user')
 
     return book
   }
@@ -37,6 +41,8 @@ export default class BooksController {
 
     book.merge(data)
     await book.save()
+
+    await book.preload('user')
 
     return book
   }
