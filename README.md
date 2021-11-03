@@ -133,4 +133,3 @@ O projeto foi feito baseado em um <a href="https://github.com/devchallenge-io/bi
 
 ---
 **Desenvolvido  por [Bruno Andreotti](https://github.com/brunoandreotti).** 
-
